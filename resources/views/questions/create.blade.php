@@ -23,7 +23,7 @@
                         </div>
                         <div class="form-group">
                             <label for="question-body">Explain you question</label>
-                            <textarea name="body" id="question-body" row="10" class="form-control"></textarea>
+                            <textarea name="body" id="question-body" rows="10" class="form-control"></textarea>
                         </div>
                         <div class="form-group">
                             <button type="submit" class="btn btn-outline-primary btn-lg">Ask this question</button>
