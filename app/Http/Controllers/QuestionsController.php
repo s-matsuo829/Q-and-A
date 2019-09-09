@@ -66,6 +66,9 @@ class QuestionsController extends Controller
      */
     public function edit(Question $question)
     {
+        if (\Gate::denies('update-question', $question)) {
+            abort(403, "Access denined");
+        }
         return view("questions.edit", compact('question'));
     }
 
@@ -78,6 +81,9 @@ class QuestionsController extends Controller
      */
     public function update(AskQuestionRequest $request, Question $question)
     {
+        if (\Gate::denies('update-question', $question)) {
+            abort(403, "Access denined");
+        }
         $question->update($request->only('title', 'body'));
 
         return redirect('/questions')->with('success', "あなたの質問は更新されました");
@@ -91,6 +97,9 @@ class QuestionsController extends Controller
      */
     public function destroy(Question $question)
     {
+        if (\Gate::denies('delete-question', $question)) {
+            abort(403, "Access denined");
+        }
         $question->delete();
 
         return redirect('/questions')->with('success', "質問を削除しました");
