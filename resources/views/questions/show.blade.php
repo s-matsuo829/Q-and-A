@@ -24,10 +24,10 @@
                             </a>
                             <span class="votes-count">1230</span>
                             <a title="よくない質問です" class="vote-down off">
-                            <i class="fas fa-caret-down fa-3x"></i>
+                                <i class="fas fa-caret-down fa-3x"></i>
                             </a>
-                            <a title="いいね！をつけます" class="favorite">
-                            <i class="fas fa-star fa-2x"></i>
+                            <a title="いいね！をつけます" class="favorite mt-2 favorited">
+                                <i class="fas fa-star fa-2x"></i>
                                 <span class="favorites-count">345</span>
                             </a>
                         </div>
@@ -60,6 +60,18 @@
                   <hr>
                   @foreach ($question->answers as $answer)
                       <div class="media">
+                          <div class="d-fex flex-column vote-controls">
+                              <a title="よい返答です" class="vote-up">
+                                  <i class="fas fa-caret-up fa-3x"></i>
+                              </a>
+                              <span class="votes-count">1230</span>
+                              <a title="よくない返答です" class="vote-down off">
+                                  <i class="fas fa-caret-down fa-3x"></i>
+                              </a>
+                              <a title="ベストアンサーをつけます" class="vote-accepted mt-2">
+                                  <i class="fas fa-check fa-2x"></i>
+                              </a>
+                          </div>
                           <div class="media-body">
                               {!! $answer->body_html !!}
                               <div class="float-right">
