@@ -20,14 +20,14 @@
                     <div class="media">
                         <div class="d-fex flex-column vote-controls">
                             <a title="よい質問です" class="vote-up">
-                                Vote up
+                                <i class="fas fa-caret-up fa-3x"></i>
                             </a>
                             <span class="votes-count">1230</span>
                             <a title="よくない質問です" class="vote-down off">
-                                Vote down
+                            <i class="fas fa-caret-down fa-3x"></i>
                             </a>
                             <a title="いいね！をつけます" class="favorite">
-                                Favorite
+                            <i class="fas fa-star fa-2x"></i>
                                 <span class="favorites-count">345</span>
                             </a>
                         </div>
