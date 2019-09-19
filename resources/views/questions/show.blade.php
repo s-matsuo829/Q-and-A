@@ -28,7 +28,7 @@
                             </a>
                             <a title="いいね！をつけます" class="favorite mt-2 favorited">
                                 <i class="fas fa-star fa-2x"></i>
-                                <span class="favorites-count">345</span>
+                                <span class="favorites-count">{{ $question->favorites_count }}</span>
                             </a>
                         </div>
                         <div class="media-body">
@@ -55,5 +55,6 @@
         'answersCount' => $question->answers_count,
       ])
     @include('answers._create')
+
 </div>
 @endsection
