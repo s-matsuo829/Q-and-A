@@ -18,9 +18,15 @@
                             <a title="よくない返答です" class="vote-down off">
                                 <i class="fas fa-caret-down fa-3x"></i>
                             </a>
-                            <a title="ベストアンサーをつけます" class="{{ $answer->status }} mt-2">
+                            <a title="ベストアンサーをつけます"
+                                class="{{ $answer->status }} mt-2"
+                                onclick="event.preventDefault(); document.getElementById('accept-answer-{{ $answer->id }}').submit();"
+                                >
                                 <i class="fas fa-check fa-2x"></i>
                             </a>
+                            <form id="accept-answer-{{ $answer->id }}" action="{{ route('answers.accept', $answer->id) }}" method="POST" style="display:none;">
+                                @csrf
+                            </form>
                         </div>
                         <div class="media-body">
                             {!! $answer->body_html !!}
