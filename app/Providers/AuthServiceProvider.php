@@ -7,7 +7,7 @@ use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvid
 use App\Question;
 use App\Policies\QuestionPolicy;
 use App\Answer;
-use App\policies\AnswerPolicy;
+use App\Policies\AnswerPolicy;
 
 class AuthServiceProvider extends ServiceProvider
 {
